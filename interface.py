@@ -39,7 +39,7 @@ class MainWindow(QMainWindow):
         self.btn_edit.setIcon(QtGui.QIcon('./assets/editing.png'))
         self.btn_addAccount.setIcon(QtGui.QIcon('./assets/add.png'))
         self.btn_copy.setIcon(QtGui.QIcon('./assets/copy.png'))
-        self.btn_delete.setIcon(QtGui.QIcon('./assets/close.png'))
+        self.btn_delete.setIcon(QtGui.QIcon('./assets/delete.png'))
         self.btn_show.setIcon(QtGui.QIcon('./assets/view.png'))
         self.btn_search.setIcon(QtGui.QIcon('./assets/search.png'))
         self.btn_exit.setIcon(QtGui.QIcon('./assets/exit.png'))
