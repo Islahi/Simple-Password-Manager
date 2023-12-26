@@ -1,0 +1,1256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>1000</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <kerning>true</kerning>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Password Manager </string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color:rgb(255, 255, 255)</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_3">
+    <item row="0" column="1">
+     <widget class="QFrame" name="frame_2">
+      <property name="styleSheet">
+       <string notr="true">	background-color: rgb(255, 255, 255)
+</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="0" column="0">
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="sizeConstraint">
+            <enum>QLayout::SetDefaultConstraint</enum>
+           </property>
+           <item>
+            <widget class="QPushButton" name="btn_logout">
+             <property name="maximumSize">
+              <size>
+               <width>80</width>
+               <height>80</height>
+              </size>
+             </property>
+             <property name="toolTip">
+              <string>logout</string>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton{
+	border-radius: 15px;
+	color: rgb(106, 103, 255);
+background-color:rgb(26, 179, 179);
+}
+
+QPushButton:hover{
+	border: 2px solid rgb(217, 217, 217);
+}
+</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>60</width>
+               <height>60</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="verticalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Fixed</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_2">
+             <property name="minimumSize">
+              <size>
+               <width>80</width>
+               <height>400</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>80</width>
+               <height>1200</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton{
+	border-radius: 15px;
+	color:rgb(106, 103, 255);
+	background-color:rgb(26, 179, 179);
+}</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>../../../Icons/كلية الهندسة.png</normaloff>../../../Icons/كلية الهندسة.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>80</width>
+               <height>80</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="verticalSpacer">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Fixed</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btn_exit">
+             <property name="minimumSize">
+              <size>
+               <width>80</width>
+               <height>80</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>80</width>
+               <height>80</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton{
+	border-radius: 15px;
+	color: rgb(106, 103, 255);
+background-color:rgb(26, 179, 179);
+}
+
+QPushButton:hover{
+	border: 2px solid rgb(217, 217, 217);
+}
+</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>../../../Icons/exit_8838804.png</normaloff>../../../Icons/exit_8838804.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>60</width>
+               <height>60</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_2">
+           <item>
+            <widget class="QLabel" name="label">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>50</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <family>Bahnschrift</family>
+               <pointsize>24</pointsize>
+               <weight>50</weight>
+               <bold>false</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color:rgb(0, 0, 0);
+</string>
+             </property>
+             <property name="text">
+              <string>Welcome to Team &quot;A&quot; Project </string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="label_2">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <family>Times New Roman</family>
+               <pointsize>14</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: rgb(255, 255, 255);
+</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout">
+             <item>
+              <widget class="QLineEdit" name="lineEdit_search">
+               <property name="minimumSize">
+                <size>
+                 <width>200</width>
+                 <height>50</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>400</width>
+                 <height>50</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>14</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QLineEdit{
+	border: 2px solid rgb(162, 162, 162);
+	border-radius: 15px;
+	Padding-left: 5px;
+	background-color: rgb(255, 255, 255)
+}
+
+QLineEdit:focus{
+	border: 2px solid rgb(26, 179, 179);
+}
+
+
+</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btn_search">
+               <property name="minimumSize">
+                <size>
+                 <width>45</width>
+                 <height>50</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>45</width>
+                 <height>50</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+border-radius: 15px;
+	color: rgb(255, 255, 255);
+background-color:rgb(217,217,217);
+}
+
+QPushButton:hover{
+	border: 1px solid rgb(26, 179, 179);
+background-color:rgb(217,217,217);
+}
+</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="icon">
+                <iconset>
+                 <normaloff>../../../Icons/search_2676520.png</normaloff>../../../Icons/search_2676520.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>30</width>
+                 <height>30</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeType">
+                <enum>QSizePolicy::Fixed</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btn_addAccount">
+               <property name="minimumSize">
+                <size>
+                 <width>250</width>
+                 <height>50</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>250</width>
+                 <height>50</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Bahnschrift</family>
+                 <pointsize>14</pointsize>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton{
+	background-color:rgb(217,217,217);
+	border-radius: 15px;
+}
+
+QPushButton:hover{
+	border: 2px solid rgb(26, 179, 179);
+background-color:rgb(217,217,217);
+}
+
+</string>
+               </property>
+               <property name="text">
+                <string>Add Account</string>
+               </property>
+               <property name="icon">
+                <iconset>
+                 <normaloff>../../../Icons/icons8-add-32.png</normaloff>../../../Icons/icons8-add-32.png</iconset>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>40</width>
+                 <height>40</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_3">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QTreeWidget" name="treeWidget">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <family>Bahnschrift</family>
+               <pointsize>14</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">Background-color:rgb(217, 217, 217);</string>
+             </property>
+             <property name="allColumnsShowFocus">
+              <bool>false</bool>
+             </property>
+             <property name="headerHidden">
+              <bool>false</bool>
+             </property>
+             <property name="columnCount">
+              <number>5</number>
+             </property>
+             <attribute name="headerCascadingSectionResizes">
+              <bool>false</bool>
+             </attribute>
+             <attribute name="headerHighlightSections">
+              <bool>false</bool>
+             </attribute>
+             <column>
+              <property name="text">
+               <string>Category</string>
+              </property>
+              <property name="font">
+               <font>
+                <family>Bahnschrift</family>
+                <pointsize>12</pointsize>
+                <weight>50</weight>
+                <bold>false</bold>
+               </font>
+              </property>
+              <property name="textAlignment">
+               <set>AlignCenter</set>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Tag</string>
+              </property>
+              <property name="font">
+               <font>
+                <family>Bahnschrift</family>
+                <pointsize>12</pointsize>
+                <weight>50</weight>
+                <bold>false</bold>
+               </font>
+              </property>
+              <property name="textAlignment">
+               <set>AlignCenter</set>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Username</string>
+              </property>
+              <property name="font">
+               <font>
+                <family>Bahnschrift</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="textAlignment">
+               <set>AlignCenter</set>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Password</string>
+              </property>
+              <property name="font">
+               <font>
+                <family>Bahnschrift</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="textAlignment">
+               <set>AlignCenter</set>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>Website</string>
+              </property>
+              <property name="font">
+               <font>
+                <family>Bahnschrift</family>
+                <pointsize>12</pointsize>
+               </font>
+              </property>
+              <property name="textAlignment">
+               <set>AlignCenter</set>
+              </property>
+             </column>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QFrame" name="frame">
+           <property name="minimumSize">
+            <size>
+             <width>400</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>500</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QFrame{
+background-color: rgb(217,217,217);
+border-radius: 10px;}</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <layout class="QGridLayout" name="gridLayout">
+            <item row="0" column="0">
+             <layout class="QVBoxLayout" name="verticalLayout_3">
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_4">
+                <item>
+                 <widget class="QPushButton" name="pushButton_save">
+                  <property name="minimumSize">
+                   <size>
+                    <width>100</width>
+                    <height>50</height>
+                   </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>Bahnschrift</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton{
+background-color:rgb(255, 255, 255);
+border-radius: 5px;
+}
+
+QPushButton:hover{
+border: 2px solid rgb(26, 179, 179);
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>Save</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="horizontalSpacer_2">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="pushButton_close">
+                  <property name="minimumSize">
+                   <size>
+                    <width>100</width>
+                    <height>50</height>
+                   </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>Bahnschrift</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton{
+background-color:rgb(255, 255, 255);
+border-radius: 5px;
+}
+
+QPushButton:hover{
+border: 2px solid rgb(26, 179, 179);
+background-color:rgb(255, 255, 255);
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>Close</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_3">
+                <property name="font">
+                 <font>
+                  <family>Bahnschrift</family>
+                  <pointsize>20</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">color: rgb(0, 0, 0);
+</string>
+                </property>
+                <property name="text">
+                 <string>ACCOUNT</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_2">
+                <item>
+                 <spacer name="horizontalSpacer_5">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="btn_copy">
+                  <property name="minimumSize">
+                   <size>
+                    <width>60</width>
+                    <height>50</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>60</width>
+                    <height>50</height>
+                   </size>
+                  </property>
+                  <property name="toolTip">
+                   <string>copy</string>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton{
+	color: rgb(0, 0, 0);
+	background-color:rgb(255, 255, 255);
+	border-radius: 15px;
+}
+
+QPushButton:hover{
+	border: 2px solid rgb(26, 179, 179);
+}
+</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="icon">
+                   <iconset>
+                    <normaloff>../../../Icons/archives.png</normaloff>../../../Icons/archives.png</iconset>
+                  </property>
+                  <property name="iconSize">
+                   <size>
+                    <width>40</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="btn_show">
+                  <property name="minimumSize">
+                   <size>
+                    <width>60</width>
+                    <height>50</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>60</width>
+                    <height>50</height>
+                   </size>
+                  </property>
+                  <property name="toolTip">
+                   <string>Show &amp; Hide password</string>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton{
+	color: rgb(0, 0, 0);
+	background-color:rgb(255, 255, 255);
+	border-radius: 15px;
+}
+
+QPushButton:hover{
+	border: 2px solid rgb(26, 179, 179);
+}
+</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="icon">
+                   <iconset>
+                    <normaloff>../../../Icons/view.png</normaloff>../../../Icons/view.png</iconset>
+                  </property>
+                  <property name="iconSize">
+                   <size>
+                    <width>40</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="btn_edit">
+                  <property name="minimumSize">
+                   <size>
+                    <width>60</width>
+                    <height>50</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>60</width>
+                    <height>50</height>
+                   </size>
+                  </property>
+                  <property name="toolTip">
+                   <string>Edit</string>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton{
+	color: rgb(0, 0, 0);
+	background-color:rgb(255, 255, 255);
+	border-radius: 15px;
+}
+
+QPushButton:hover{
+	border: 2px solid rgb(26, 179, 179);
+}
+</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="icon">
+                   <iconset>
+                    <normaloff>../../../Icons/editing.png</normaloff>../../../Icons/editing.png</iconset>
+                  </property>
+                  <property name="iconSize">
+                   <size>
+                    <width>40</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="btn_delete">
+                  <property name="minimumSize">
+                   <size>
+                    <width>60</width>
+                    <height>50</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>60</width>
+                    <height>50</height>
+                   </size>
+                  </property>
+                  <property name="toolTip">
+                   <string>Delete </string>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton{
+	color: rgb(0, 0, 0);
+	background-color:rgb(255, 255, 255);
+	border-radius: 15px;
+}
+
+QPushButton:hover{
+	border: 2px solid rgb(26, 179, 179);
+}</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="icon">
+                   <iconset>
+                    <normaloff>../../../Icons/delete.png</normaloff>../../../Icons/delete.png</iconset>
+                  </property>
+                  <property name="iconSize">
+                   <size>
+                    <width>40</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="btn_browser">
+                  <property name="minimumSize">
+                   <size>
+                    <width>60</width>
+                    <height>50</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>60</width>
+                    <height>50</height>
+                   </size>
+                  </property>
+                  <property name="toolTip">
+                   <string>open url</string>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton{
+	color: rgb(0, 0, 0);
+	background-color:rgb(255, 255, 255);
+	border-radius: 15px;
+}
+
+QPushButton:hover{
+	border: 2px solid rgb(26, 179, 179);
+}</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="iconSize">
+                   <size>
+                    <width>40</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="horizontalSpacer_4">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_8">
+                <property name="font">
+                 <font>
+                  <family>Bahnschrift</family>
+                  <pointsize>16</pointsize>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">Padding-left: 5px;</string>
+                </property>
+                <property name="text">
+                 <string>Tags</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="lineEdit">
+                <property name="font">
+                 <font>
+                  <family>Bahnschrift</family>
+                  <pointsize>14</pointsize>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QLineEdit{
+	border: 2px solid rgb(255, 255, 255);
+	Padding-left: 5px;
+	background-color: rgb(255, 255, 255);
+	border-radius: 15px;
+}
+
+QLineEdit:hover{
+	border: 1px solid rgb(26, 179, 179);
+	
+	background-color: rgb(255, 255, 255);
+}</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_4">
+                <property name="font">
+                 <font>
+                  <family>Bahnschrift</family>
+                  <pointsize>16</pointsize>
+                  <weight>50</weight>
+                  <bold>false</bold>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">color: rgb(0, 0, 0);
+Padding-left: 5px;
+</string>
+                </property>
+                <property name="text">
+                 <string>Username:</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="lineEdit_username">
+                <property name="maximumSize">
+                 <size>
+                  <width>480</width>
+                  <height>50</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Bahnschrift</family>
+                  <pointsize>14</pointsize>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QLineEdit{
+	border: 2px solid rgb(255, 255, 255);
+	Padding-left: 5px;
+	background-color: rgb(255, 255, 255);
+	border-radius: 15px;
+}
+
+QLineEdit:hover{
+	border: 1px solid rgb(26, 179, 179);
+	
+	background-color: rgb(255, 255, 255);
+}</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_6">
+                <property name="font">
+                 <font>
+                  <family>Bahnschrift</family>
+                  <pointsize>16</pointsize>
+                  <weight>50</weight>
+                  <bold>false</bold>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">color: rgb(0, 0, 0);
+Padding-left: 5px;
+</string>
+                </property>
+                <property name="text">
+                 <string>Password:</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="lineEdit_password">
+                <property name="maximumSize">
+                 <size>
+                  <width>480</width>
+                  <height>50</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Bahnschrift</family>
+                  <pointsize>14</pointsize>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QLineEdit{
+	border: 2px solid rgb(255, 255, 255);
+	Padding-left: 5px;
+	background-color: rgb(255, 255, 255);
+	border-radius: 15px;
+}
+
+QLineEdit:hover{
+	border: 1px solid rgb(26, 179, 179);
+	
+	background-color: rgb(255, 255, 255);
+}</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_5">
+                <item>
+                 <widget class="QProgressBar" name="progressBar">
+                  <property name="maximumSize">
+                   <size>
+                    <width>400</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QProgressBar {
+		 border: 1px solid rgb(0, 0, 0);
+        border-radius: 10px;
+        text-align: center;
+        background-color: rgb(217, 217, 217);
+        color: black;
+    }
+    QProgressBar::chunk {
+		 border-radius: 10px;
+        background-color: rgb(255, 70, 68);
+    }</string>
+                  </property>
+                  <property name="maximum">
+                   <number>90</number>
+                  </property>
+                  <property name="value">
+                   <number>30</number>
+                  </property>
+                  <property name="textVisible">
+                   <bool>false</bool>
+                  </property>
+                  <property name="format">
+                   <string>%p%</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_7">
+                  <property name="maximumSize">
+                   <size>
+                    <width>100</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <pointsize>10</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QLabel{
+color: rgb(255, 70, 68);
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>weak</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_10">
+                <property name="font">
+                 <font>
+                  <family>Bahnschrift</family>
+                  <pointsize>16</pointsize>
+                  <weight>50</weight>
+                  <bold>false</bold>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">color: rgb(0, 0, 0);
+Padding-left: 5px;
+</string>
+                </property>
+                <property name="text">
+                 <string>Website:</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="lineEdit_website">
+                <property name="maximumSize">
+                 <size>
+                  <width>480</width>
+                  <height>50</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Bahnschrift</family>
+                  <pointsize>14</pointsize>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QLineEdit{
+	border: 2px solid rgb(255, 255, 255);
+	Padding-left: 5px;
+	background-color: rgb(255, 255, 255);
+	border-radius: 15px;
+}
+
+QLineEdit:hover{
+	border: 1px solid rgb(26, 179, 179);
+	
+	background-color: rgb(255, 255, 255);
+}</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_5">
+                <property name="font">
+                 <font>
+                  <family>Bahnschrift</family>
+                  <pointsize>16</pointsize>
+                  <weight>50</weight>
+                  <bold>false</bold>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">Padding-left: 5px;</string>
+                </property>
+                <property name="text">
+                 <string>Category:</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="lineEdit_category">
+                <property name="maximumSize">
+                 <size>
+                  <width>480</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>14</pointsize>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QLineEdit{
+	border: 2px solid rgb(255, 255, 255);
+	Padding-left: 5px;
+	background-color: rgb(255, 255, 255);
+	border-radius: 15px;
+}
+
+QLineEdit:hover{
+	border: 1px solid rgb(26, 179, 179);
+	
+	background-color: rgb(255, 255, 255);
+}</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_9">
+                <property name="font">
+                 <font>
+                  <family>Bahnschrift</family>
+                  <pointsize>16</pointsize>
+                  <weight>50</weight>
+                  <bold>false</bold>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">color: rgb(0, 0, 0);
+Padding-left: 5px;
+</string>
+                </property>
+                <property name="text">
+                 <string>Note:</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QTextEdit" name="textEdit">
+                <property name="font">
+                 <font>
+                  <pointsize>14</pointsize>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">background-color: rgb(255, 255, 255);
+border-radius: 15px;
+
+</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1200</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
