@@ -121,4 +121,4 @@ If you'd like to contribute to the project, follow these steps:
 - Allowed weak passwords for the master password.
 - When accessed on devices with lower screen resolution, all fonts are reduced in size.
 
-Feel free to explore, contribute, and enhance the Simple PYQT5 Password Manager!
+Feel free to explore, contribute, and enhance this project
