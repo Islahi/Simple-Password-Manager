@@ -9,10 +9,15 @@ class signUp(QMainWindow):
 
         self.username = self.findChild(QLineEdit, 'lineEdit')
         self.password = self.findChild(QLineEdit, 'lineEdit_2')
-        self.password2 = self.findChild(QLineEdit, 'lineEdit_3')
+        self.password2 = self.findChild(QLineEdit, 'lineEdit_4')
         self.login_btn = self.findChild(QPushButton, 'pushButton_2')
         self.signUp_btn = self.findChild(QPushButton, 'pushButton')
+        self.strong_lbl = self.findChild(QLabel, 'label_2')
+        self.show_pass1_btn = self.findChild(QPushButton, 'show_pass_1')
+        self.show_pass2_btn = self.findChild(QPushButton, 'show_pass_2')
 
+        self.show_pass1_btn.setIcon(QtGui.QIcon('./assets/view.png'))
+        self.show_pass2_btn.setIcon(QtGui.QIcon('./assets/view.png'))
         self.setWindowIcon(QtGui.QIcon('./assets/lock.png'))
         # self.show()
 

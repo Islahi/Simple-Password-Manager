@@ -22,10 +22,18 @@ class window():
         self.loginWindow.show()
         self.loginWindow.signUp_btn.clicked.connect(self.open_signup)
         self.loginWindow.login_btn.clicked.connect(self.check_user)
+        self.loginWindow.show_pass.clicked.connect(self.show_pass)
+        self.passFlag = True
 
         # Signup Window
         self.signupWindow.signUp_btn.clicked.connect(self.add_user)
         self.signupWindow.login_btn.clicked.connect(self.open_login)
+        self.signupWindow.password.textChanged.connect(self.check_pass)
+        self.signupWindow.password2.textChanged.connect(self.pass2_change)
+        self.signupWindow.show_pass1_btn.clicked.connect(self.show_pass_1)
+        self.signupWindow.show_pass2_btn.clicked.connect(self.show_pass_2)
+        self.pass1Flag = True
+        self.pass2Flag = True
 
         # Main Window
         self.passHiddenFlag = True
@@ -247,6 +255,12 @@ class window():
         self.main.frame.hide()   
 
     def open_login(self):
+        if not(self.passFlag):
+            self.show_pass()
+        if not(self.pass1Flag):
+            self.show_pass_1()
+        if not(self.pass2Flag):
+            self.show_pass_2()
         self.signupWindow.hide()
         self.main.hide()
         self.loginWindow.show()
@@ -270,30 +284,73 @@ class window():
                 self.display_data()
                 self.main.show()
                 self.main.label_welcome.setText(f'Welcome back {items[0].username} ')
+                self.show_pass()
             else:
-                QMessageBox.warning(None, 'Wrong Input', 'Incorrect username or password. Please try again!')
+                QMessageBox.warning(None, 'Wrong Input', 'No username confirm or incorrect password. Please try again!')
                 self.loginWindow.username.setText('')
                 self.loginWindow.password.setText('')
         except: 
-            QMessageBox.warning(None, 'No user confirm', 'Create an account first!')
+            QMessageBox.warning(None, 'Wrong Input', 'No username confirm or incorrect password. Please try again!')
             self.loginWindow.username.setText('')
             self.loginWindow.password.setText('')
 
     def add_user(self):
-        if self.signupWindow.password.text() == self.signupWindow.password2.text():
+        strength = hash().CheckPasswordStrength(self.signupWindow.password.text())
+        if self.signupWindow.password.text() == self.signupWindow.password2.text() and strength == 'strong' and self.signupWindow.username.text() != '':
             password = hash().hashcrypt(self.signupWindow.password.text())
             username = self.signupWindow.username.text()
             encryptKey = hash().get_key()
             data().add_user(userInput= username, passInput= password, keyInput= encryptKey)
             self.signupWindow.hide()
             self.loginWindow.show()
+            self.signupWindow.username.setText('')
+            self.signupWindow.password.setText('')
+            self.signupWindow.password2.setText('')
+            self.show_pass_1()
+            self.show_pass_2()
         else:
             QMessageBox.warning(None, 'Wrong Input', 'Passwords are not match. Please try again!')
-            self.signupWindow.password2.setText('')
             self.signupWindow.password.setText('')
-        self.signupWindow.username.setText('')
-        self.signupWindow.password.setText('')
-        self.signupWindow.password2.setText('')
+
+    def check_pass(self):
+        strength = hash().CheckPasswordStrength(self.signupWindow.password.text())
+        if strength != 'strong':
+            self.signupWindow.strong_lbl.setStyleSheet('''QLabel{
+                                                            border: solid rgb(38, 38, 48);
+                                                            Padding-left: 5px;
+                                                            background-color: rgb(255, 255, 255);
+                                                            color:  rgb(255, 70, 68);
+                                                            }''')
+            self.signupWindow.password2.setReadOnly(True)
+        else:
+            self.signupWindow.strong_lbl.setStyleSheet('''QLabel{
+                                                            border: solid rgb(38, 38, 48);
+                                                            Padding-left: 5px;
+                                                            background-color: rgb(255, 255, 255);
+                                                            }''')
+            self.signupWindow.password2.setReadOnly(False)
+
+    def pass2_change(self):
+        if self.signupWindow.password.text() == self.signupWindow.password2.text():
+            self.signupWindow.password2.setStyleSheet('''QLineEdit{
+                                                            border: 1px solid rgb(38, 38, 48);
+                                                            border-radius: 15px;
+                                                            Padding-left: 5px;
+                                                            background-color: rgb(255, 255, 255);
+                                                        }
+                                                        QLineEdit:focus{
+                                                            border: 2px solid rgb(35, 218, 233)
+                                                        }''')
+        else:
+            self.signupWindow.password2.setStyleSheet('''QLineEdit{
+                                                            border: 1px solid rgb(255, 70, 68);
+                                                            border-radius: 15px;
+                                                            Padding-left: 5px;
+                                                            background-color: rgb(255, 255, 255);
+                                                        }
+                                                        QLineEdit:focus{
+                                                            border: 2px solid rgb(255, 70, 68)
+                                                        }''')            
 
     def FrameShow(self):
         self.main.label_edit.setText('Account')
@@ -396,10 +453,44 @@ class window():
             self.main.lineEdit_password.setText(hash().decrypt(keyInput= self.key, data= items[0].password))
 
     def open_signup(self):
+        if not(self.passFlag):
+            self.show_pass()
         self.loginWindow.username.setText('')
         self.loginWindow.password.setText('')
         self.loginWindow.hide()
         self.signupWindow.show()
+        self.signupWindow.password2.setReadOnly(True)
+
+    def show_pass_1(self):
+        if self.pass1Flag:
+            self.signupWindow.password.setEchoMode(QLineEdit.Normal)
+            self.signupWindow.show_pass1_btn.setIcon(QtGui.QIcon('./assets/hide.png'))
+            self.pass1Flag = False
+        else:
+            self.signupWindow.password.setEchoMode(QLineEdit.Password)
+            self.signupWindow.show_pass1_btn.setIcon(QtGui.QIcon('./assets/view.png'))
+            self.pass1Flag = True
+            
+
+    def show_pass_2(self):
+        if self.pass2Flag:
+            self.signupWindow.password2.setEchoMode(QLineEdit.Normal)
+            self.signupWindow.show_pass2_btn.setIcon(QtGui.QIcon('./assets/hide.png'))
+            self.pass2Flag = False
+        else:
+            self.signupWindow.password2.setEchoMode(QLineEdit.Password)
+            self.signupWindow.show_pass2_btn.setIcon(QtGui.QIcon('./assets/view.png'))
+            self.pass2Flag = True
+
+    def show_pass(self):
+        if self.passFlag:
+            self.loginWindow.password.setEchoMode(QLineEdit.Normal)
+            self.loginWindow.show_pass.setIcon(QtGui.QIcon('./assets/hide.png'))
+            self.passFlag = False
+        else:
+            self.loginWindow.password.setEchoMode(QLineEdit.Password)
+            self.loginWindow.show_pass.setIcon(QtGui.QIcon('./assets/view.png'))
+            self.passFlag = True
 
 
 if __name__ == '__main__':

@@ -23,9 +23,9 @@ This password manager is built on a PYQT5 graphical user interface, utilizing th
 - **Intuitive GUI:** Enjoy a user-friendly interface for a seamless experience.
 
 ## Screenshoots
-![main screen](main-screen.png)
-![adding data](add-account-screen.png)
-![signup screen](signup.png)![login screen](login.png)
+![main screen](src/assets/main-screen.png)
+![adding data](src/assets/add-account-screen.png)
+![signup screen](src/assets/signup.png)![login screen](src/assets/login.png)
 
 ## Installation
 
@@ -118,7 +118,6 @@ If you'd like to contribute to the project, follow these steps:
 
 ## Known Issues
 
-- Allowed weak passwords for the master password.
 - When accessed on devices with lower screen resolution, all fonts are reduced in size.
 
 Feel free to explore, contribute, and enhance this project
