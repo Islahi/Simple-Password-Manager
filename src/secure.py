@@ -39,14 +39,3 @@ class HashEncryption:
 if __name__=="__main__":
     password = input("enter a password : ")
     print(HashEncryption().CheckPasswordStrength(password))
-
-    
-# # Test
-# password = HashEncryption().hashcrypt('ahsan')
-# check = input('Enter password: ')
-# print(password == HashEncryption().hashcrypt(check))
-
-# # key = HashEncryption().get_key()
-# print(key)
-# print(HashEncryption().encrypt(keyInput= key, data= 'something'))
-# print(HashEncryption().decrypt(keyInput= b'W3Epi3p6fFcTbHaDIgOZ0CIEshbRDimwaHAfd5lNM4k=', data= b'gAAAAABlcMyP0FB6RXVpjUNgJe7XLkueQ0qqSY7atht0x7T9mJdYKP1kaMzuJVBRBlEeA2EywfSHhTxACvOmd0oCUdt6aQWq2Q==').decode())

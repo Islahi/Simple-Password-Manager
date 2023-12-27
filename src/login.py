@@ -11,6 +11,7 @@ class login(QMainWindow):
         self.password = self.findChild(QLineEdit, 'lineEdit_2')
         self.login_btn = self.findChild(QPushButton, 'pushButton')
         self.signUp_btn = self.findChild(QPushButton, 'pushButton_2')
+        self.show_pass = self.findChild(QPushButton, 'show_btn')
 
         self.setWindowIcon(QtGui.QIcon('./assets/lock.png'))
         self.setTabOrder(self.username, self.password)
