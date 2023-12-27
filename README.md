@@ -5,13 +5,13 @@ This password manager is built on a PYQT5 graphical user interface, utilizing th
 ## Table of Contents
 
 <ul>
-	<li><a href="#-Features">Getting Started</a></li>
-	<li><a href="#-Screenshoots">Features</a></li>
-	<li><a href="#-Installation">Installation</a></li>
-	<li><a href="#-Project-Workflow-Overview"> Project Workflow Overview</a></li>
-	<li><a href="#-Contributing">Contributing</a></li>
-	<li><a href="#-To-Do">To do</a></li>
-	<li><a href="#-Known-Issues">Known Issues</a></li>
+	<li><a href="#features">Features</a></li>
+	<li><a href="#screenshoots">Screenschots</a></li>
+	<li><a href="#installation">Installation</a></li>
+	<li><a href="#project-workflow-overview"> Project Workflow Overview</a></li>
+	<li><a href="#contributing">Contributing</a></li>
+	<li><a href="#to-do">To do</a></li>
+	<li><a href="#known-issues">Known Issues</a></li>
 </ul>
 
 
