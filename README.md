@@ -1,6 +1,19 @@
-# Simple PyQt5 Password Manager
+<h1 align= 'center'> Simple PyQt5 Password Manager</h1>
 
 This password manager is built on a PYQT5 graphical user interface, utilizing the cryptography and SqlAlchemy libraries for enhanced security and efficient data management.
+
+## Table of Contents
+
+<ul>
+	<li><a href="#-Features">Getting Started</a></li>
+	<li><a href="#-Screenshoots">Features</a></li>
+	<li><a href="#-Installation">Installation</a></li>
+	<li><a href="#-Project-Workflow-Overview"> Project Workflow Overview</a></li>
+	<li><a href="#-Contributing">Contributing</a></li>
+	<li><a href="#-To-Do">To do</a></li>
+	<li><a href="#-Known-Issues">Known Issues</a></li>
+</ul>
+
 
 ## Features
 
@@ -14,7 +27,7 @@ This password manager is built on a PYQT5 graphical user interface, utilizing th
 ![adding data](add-account-screen.png)
 ![signup screen](signup.png)![login screen](login.png)
 
-## Installation Instructions
+## Installation
 
 To use the password manager, make sure you have the following dependencies installed:
 
